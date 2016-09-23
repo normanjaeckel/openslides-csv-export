@@ -58,6 +58,7 @@ Next Version (unreleased)
 -------------------------
 * Updated to OpenSlides 2.1. Dropped support for OpenSlides 2.0.
 * Added example how to use states and templates.
+* Added example for projector slide.
 
 
 Version 2.0.0 (2016-04-23)

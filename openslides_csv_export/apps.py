@@ -9,13 +9,18 @@ class CSVExportAppConfig(AppConfig):
     description = __description__
     version = __version__
     angular_site_module = True
-    angular_projector_module = False  # TODO
+    angular_projector_module = True
     js_files = [
         'static/js/openslides_csv_export/base.js',
         'static/js/openslides_csv_export/site.js',
+        'static/js/openslides_csv_export/projector.js',
     ]
 
     def ready(self):
+        # Load projector elements.
+        # Do this by just importing all from these files.
+        from . import projector  # noqa
+
         # Add plugin urlpatters to application configuration so OpenSlides
         # can find it.
         from .urls import urlpatterns
